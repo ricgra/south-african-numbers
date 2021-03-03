@@ -1,0 +1,5 @@
+*.iml
+target/
+.idea/
+src/angular-frontend/app/node_modules
+src/angular-frontend/app/dist

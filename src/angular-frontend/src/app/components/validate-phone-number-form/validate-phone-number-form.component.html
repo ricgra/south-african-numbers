@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="card-body">
+            <ul class="text-center list-inline">
+                <li class="list-inline-item">
+                    <input type="text" [(ngModel)]="phoneNumber" />
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-outline-dark" (click)="validatePhoneNumberFromForm()">Validate</button>
+                </li>
+                <li *ngIf="isValid" class="list-inline-item">
+                    <p class="text-success">Accepted!</p>
+                </li>
+                <li *ngIf="!isValid" class="list-inline-item">
+                    <p class="text-danger">{{validateMessage}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

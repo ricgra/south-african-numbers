@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "85908aa5-2fe1-4b17-a613-3b37bdaa50b7",
+		"name": "SouthAfricaNumbers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ricgra/Projects/south-african-numbers/Postman/south_african_mobile_numbers.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/rest/phone-number/csv",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"phone-number",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download as CSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/phone-number/csv",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"phone-number",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/phone-number",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"phone-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate single phone number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/phone-number/27831234567/validate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"phone-number",
+						"27831234567",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

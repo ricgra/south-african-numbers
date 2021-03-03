@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">phone number</th>
+                    <th scope="col">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let phoneNumber of phoneNumbersOutput?.phoneNumbers">
+                    <td>{{ phoneNumber.id }}</td>
+                    <td>{{ phoneNumber.phoneNumber }}</td>
+                    <td>{{ phoneNumber.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

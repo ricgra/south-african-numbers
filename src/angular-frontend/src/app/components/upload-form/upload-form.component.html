@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="card-body">
+            <ul class="text-center list-inline">
+                <li class="list-inline-item">
+                    <input class="btn btn-outline-dark" type="file" accept=".csv"
+                        (change)="handleFileSelection($event)">
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-outline-dark" (click)="uploadCSV()">Upload CSV</button>
+                </li>
+                <li *ngIf="uploadMessage === 'ok'" class="list-inline-item">
+                    <p class="text-success">Uploaded!</p>
+                </li>
+                <li *ngIf="uploadMessage !== '' && uploadMessage !== 'ok'" class="list-inline-item">
+                    <p class="text-danger">{{uploadMessage}}</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
